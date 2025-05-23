@@ -1,0 +1,171 @@
+.board-container {
+    padding: 20px;
+    max-width: 60%;
+    margin: 20px auto;
+    background-color: #41785d;
+    border-radius: 12px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.board-container button {
+    background-color: #000000cc;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.board-container button:hover {
+    background-color: #357ABD;
+}
+
+.board-container input[type="text"],
+.board-container input[type="search"] {
+    width: 40%;
+    max-width: 80%;
+    height: 32px;
+    padding: 8px 10px;
+    margin: 0 8px 0 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+
+.board-container textarea,
+.board-container input {
+    width: 40%;
+    max-width: 80%;
+    height: 120px;
+    padding: 8px;
+    margin: 6px 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.board-container h1 {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.notes-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.notes-list li {
+    max-width: 30%;
+    min-width: 20%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 249, 159);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.3s;
+    word-wrap: break-word;
+}
+
+.notes-list li div {
+    max-width: 100%;
+    text-align: center;
+}
+
+.notes-list li:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.notes-list strong {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.notes-list small {
+    display: block;
+    margin-bottom: 10px;
+    color: #888;
+    font-style: italic;
+}
+
+.notes-list button {
+    width: 60%;
+    max-height: 12%;
+}
+
+.notes-list p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.notes-list input[type="text"],
+.notes-list textarea {
+    margin-bottom: 8px;
+}
+
+.note-buttons button {
+    background-color: #f44336; 
+    margin-right: 8px;
+}
+
+.note-buttons button:first-child {
+    background-color: #4caf50;
+}
+
+
+.user {
+    position: relative;
+    left: 60%;
+    bottom: 9vh;
+    text-align: right;
+    max-width: 40%;
+    height: 10%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.user button {
+    width: 40%;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.add-note h2{
+    margin: 4px 2px;
+}
+
+.add-note {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-note button {
+    margin-left: 0;
+}
+  
+.filter {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

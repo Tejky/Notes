@@ -1,0 +1,121 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Notes API",
+      "version": "1.0.0",
+      "description": "API for note taking"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:5000"
+      }
+    ],
+    "paths": {
+      "/notes": {
+        "get": {
+          "summary": "Gets all notes",
+          "parameters": [
+            {
+              "in": "query",
+              "name": "email",
+              "schema": {
+                "type": "string"
+              },
+              "description": "Filters by user"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Note list"
+            }
+          }
+        },
+        "post": {
+          "summary": "Add a new note",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Note"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Note created"
+            }
+          }
+        }
+      },
+      "/notes/{id}": {
+        "put": {
+          "summary": "Updates a note",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Note"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Note updated"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Deletes note",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Note deleted"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Note": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          },
+          "required": ["title", "content", "email"]
+        }
+      }
+    }
+  }
+  
